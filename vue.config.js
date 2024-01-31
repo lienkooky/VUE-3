@@ -3,6 +3,16 @@ const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
 
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `
+        @import "@/assets/scss/reset.scss";
+        @import "@/assets/scss/nomalize.scss";
+        `,
+      },
+    },
+  },
   // build 할 때 타켓 디렉토리 (백앤드쪽)
   outputDir: "../backend/src/main/resources/static", // Build Directory
 
