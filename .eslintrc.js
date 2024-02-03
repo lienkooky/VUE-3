@@ -8,8 +8,22 @@ module.exports = {
   parserOptions: {
     parser: "@babel/eslint-parser",
   },
+  overrides: [
+    {
+      files: ["*.html"],
+      parser: "@html-eslint/parser",
+      extends: ["plugin:@html-eslint/recommended"],
+    },
+  ],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "import/newline-after-import": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: true,
+      },
+    ],
   },
 };

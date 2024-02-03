@@ -9,6 +9,7 @@ module.exports = defineConfig({
         additionalData: `
         @import "@/assets/scss/reset.scss";
         @import "@/assets/scss/nomalize.scss";
+        @import "@/assets/scss/styles.css";
         `,
       },
     },
